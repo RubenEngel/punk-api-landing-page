@@ -5,34 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Great IPA</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
     <script src="index.js"></script>
 </head>
 <body>
     <!-- Navbar -->
-    <nav id="navbar">
+    <div class="navbar">
         <!-- Logo -->
         <div>
-            <img src="assets/logo.png" alt="Beer Logo">
+            <img class="navbar__logo" src="assets/logo.png" alt="Beer Logo">
         </div>
         <!-- Nav links -->
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="index.html">Beers</a>
-            <a href="index.html">Contacts</a>
+        <nav class="navbar__nav">
+            <a class="navbar__navItem" href="index.html">Home</a>
+            <a class="navbar__navItem" href="index.html">Beers</a>
+            <a class="navbar__navItem" href="index.html">Contacts</a>
         </nav>
-    </nav>
-    <main>
-        <section>
+    </div>
+    <!-- <main> -->
+        <section class="hero">
             <!--  Welcome image -->
-            <div>
-                <h1>Great IPA</h1>
-                <p>
-                    Some hops is plowed. An often hairy girl scout thoroughly makes 
-                    a pact with the Honey Brown over the Budweiser. 
-                    A blood clot makes a pact with the discusting satellite brewery. 
-                    A lover about the Pilsner Urquell takes a peek at the bottle of beer. 
-                    The coors light, the crank case of an IPA, and a Citra Ninja are what made America great!
-                </p>
+            <div class="hero__image">
+                <div class="hero__text">
+                   <h1 class="hero__heading">Great IPA</h1>
+                    <p class="hero__paragraph">
+                        Some hops is plowed. An often hairy girl scout thoroughly makes 
+                        a pact with the Honey Brown over the Budweiser. 
+                        A blood clot makes a pact with the discusting satellite brewery. 
+                        A lover about the Pilsner Urquell takes a peek at the bottle of beer. 
+                        The coors light, the crank case of an IPA, and a Citra Ninja are what made America great!
+                    </p> 
+                </div>
+                
             </div>
         </section>
         <section>
@@ -47,12 +53,12 @@
                 <img src="" alt="">
             </div>
         </section>
-    </main>
-    <footer>
-        <div>
-            <img src="assets/logo.png" alt="Beer Logo">
+    <!-- </main> -->
+    <footer class="footer">
+        <div class="footer__top">
+            <img class="footer__logo" src="assets/logo.png" alt="Beer Logo">
         </div>
-        <div>
+        <div class="footer__bottom">
             <p>Copyright Collective 2021</p>
         </div>
     </footer>

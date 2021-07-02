@@ -1,0 +1,101 @@
+body,
+html {
+  font-family: "Open Sans", sans-serif;
+  /* font-weight: 300; */
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.hero {
+}
+
+.hero__text {
+  color: white;
+  padding: 30px;
+  width: 40%;
+}
+
+.hero__heading {
+  font-size: 3rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.hero__paragraph {
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.5rem;
+}
+
+.hero__image {
+  background-image: url("assets/hero.jpeg");
+  height: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-top: 200px;
+}
+
+.navbar {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  opacity: 70%;
+  height: 70px;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+}
+
+.navbar__logo {
+  margin: 10px 20px;
+  width: 40px;
+  opacity: 100%;
+}
+
+.navbar__nav {
+  margin-right: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar__navItem {
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0 15px;
+  color: white;
+}
+
+.footer {
+  text-align: center;
+}
+
+.footer__top {
+  background-color: black;
+  padding: 40px 0;
+  margin: 0;
+}
+
+.footer__bottom {
+  background-color: #182629;
+  height: 40px;
+  color: white;
+}
+
+.footer__bottom {
+  margin-top: 0;
+  padding-top: 15px;
+}
+
+.footer__logo {
+  width: 40px;
+}
