@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
-    <script src="index.js"></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -41,17 +40,34 @@
                 
             </div>
         </section>
-        <section>
+        <section >
             <!-- Beer grid -->
-            <div>
-                <h2>
+            <div id='beers'>
 
-                </h2>
-                <p>
+                <template id='beer__template'>
+                    <div class='beer__container'>
+                        <div class="beer_textContainer">
+                            <h2 class="beer__title">
 
-                </p>
-                <img src="" alt="">
+                            </h2>
+                            <p class="beer__description">
+
+                            </p>
+                        </div>
+                        <div class="beer__imageContainer">
+                            <img class="beer__image" src="" alt=""/>
+                        </div>
+                    </div>
+                </template>
+
+                
             </div>
+            <div class="beer__buttonContainer">
+                <button id="beer__button">
+                    Load more
+                </button> 
+            </div>
+          
         </section>
     <!-- </main> -->
     <footer class="footer">
@@ -62,5 +78,6 @@
             <p>Copyright Collective 2021</p>
         </div>
     </footer>
+    <script src="index.js"></script>
 </body>
 </html>
