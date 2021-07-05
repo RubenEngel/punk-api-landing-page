@@ -51,6 +51,7 @@ p {
     display: none;
   }
 }
+
 .navbar__nav {
   margin-right: 50px;
   display: flex;
@@ -62,6 +63,7 @@ p {
     display: none;
   }
 }
+
 .navbar__navItem {
   text-transform: uppercase;
   text-decoration: none;
@@ -97,6 +99,7 @@ p {
     width: 40%;
   }
 }
+
 .hero__heading {
   font-size: 3rem;
   font-weight: 300;
@@ -120,6 +123,7 @@ p {
     background-color: rgba(0, 0, 0, 0);
   }
 }
+
 .hero__image {
   background-image: url("assets/hero.jpeg");
   height: 70%;
@@ -135,6 +139,7 @@ p {
     height: 60%;
   }
 }
+
 #beer__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));

@@ -8,19 +8,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css"> -->
+    <script src="https://kit.fontawesome.com/ffbf55e587.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- Navbar -->
     <div class="navbar">
         <!-- Logo -->
-        <div>
+        <div class="navbar__left">
             <img class="navbar__logo" src="assets/logo.png" alt="Beer Logo">
         </div>
         <!-- Nav links -->
-        <nav class="navbar__nav">
-            <a class="navbar__navItem" href="index.html">Home</a>
-            <a class="navbar__navItem" href="index.html">Beers</a>
-            <a class="navbar__navItem" href="index.html">Contacts</a>
+        <div class="navbar__right">
+            <nav class="navbar__nav">
+                <a class="navbar__navItem" href="/">Home</a>
+                <a class="navbar__navItem" href="#beer__grid">Beers</a>
+                <a class="navbar__navItem" href="/">Contacts</a>
+            </nav>
+            <div class="navbar__menuIcon">
+                <i class="fas fa-bars "></i>
+            </div>
+        </div>
+    </div>
+    <div class="navbar__menu hidden">
+        <nav class="navbar__nav--mobile">
+            <a class="navbar__navItem" href="/">Home</a>
+            <a class="navbar__navItem" href="#beer__grid">Beers</a>
+            <a class="navbar__navItem" href="/">Contacts</a>
         </nav>
     </div>
     <!-- <main> -->
@@ -28,42 +42,27 @@
             <!--  Welcome image -->
             <div class="hero__image">
                 <div class="hero__text">
-                   <h1 class="hero__heading">Great IPA</h1>
-                    <p class="hero__paragraph">
-                        Some hops is plowed. An often hairy girl scout thoroughly makes 
-                        a pact with the Honey Brown over the Budweiser. 
-                        A blood clot makes a pact with the discusting satellite brewery. 
-                        A lover about the Pilsner Urquell takes a peek at the bottle of beer. 
-                        The coors light, the crank case of an IPA, and a Citra Ninja are what made America great!
-                    </p> 
+                    <div class="hero__textBackground">
+                       <h1 class="hero__heading">Great IPA</h1>
+                        <p class="hero__paragraph">
+                            Some hops is plowed. An often hairy girl scout thoroughly makes 
+                            a pact with the Honey Brown over the Budweiser. 
+                            A blood clot makes a pact with the discusting satellite brewery. 
+                            A lover about the Pilsner Urquell takes a peek at the bottle of beer. 
+                            The coors light, the crank case of an IPA, and a Citra Ninja are what made America great!
+                        </p>  
+                    </div>
+                   
                 </div>
-                
             </div>
         </section>
         <section >
             <!-- Beer grid -->
-            <div id='beers'>
-
-                <template id='beer__template'>
-                    <div class='beer__container'>
-                        <div class="beer_textContainer">
-                            <h2 class="beer__title">
-
-                            </h2>
-                            <p class="beer__description">
-
-                            </p>
-                        </div>
-                        <div class="beer__imageContainer">
-                            <img class="beer__image" src="" alt=""/>
-                        </div>
-                    </div>
-                </template>
-
+            <div id='beer__grid'>
                 
             </div>
             <div class="beer__buttonContainer">
-                <button id="beer__button">
+                <button class="beer__button">
                     Load more
                 </button> 
             </div>
