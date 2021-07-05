@@ -4,9 +4,14 @@ let page = 1;
 function fetchData() {
     fetch(`https://api.punkapi.com/v2/beers?page=${page}&per_page=10`)
    .then((response) => response.json())
-   .then((data) => data.forEach((beer) => {
+   .then((data) => 
+        data.length ?
+        data.forEach((beer) => {
         createBeerContainer(beer)
-   }))
+        })
+        :
+        document.querySelector('.beer__button').classList.add('hidden')
+   )
    .catch((error) => {
        console.log(error);
         document.querySelector('.beer__error').classList.remove('hidden')
@@ -31,7 +36,7 @@ function createBeerContainer(beer) {
     //  Place elements within beer container
     beerTextContainer.appendChild(beerTitle).insertAdjacentHTML('beforeend', beer.name);
     beerTextContainer.appendChild(beerDesc).insertAdjacentHTML('beforeend', beer.description);
-    beerImgContainer.appendChild(beerImg).src = beer.image_url;
+    beerImgContainer.appendChild(beerImg).src = beer.image_url || "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/1024px-No_image_available.svg.png";
     beerImgContainer.appendChild(beerClearHeart).src = 'assets/heart-thin-32.png'
     beerImgContainer.appendChild(beerFullHeart).src = 'assets/heart-thin-white-32.png'
     beerContainer.appendChild(beerTextContainer);
@@ -50,9 +55,7 @@ function createBeerContainer(beer) {
     beerImgContainer.addEventListener('click', () => beerFullHeart.classList.toggle('hidden'))
 
     // Add beer container to beer grid
-    beerGrid.appendChild(beerContainer)
-    setTimeout(() => beerContainer.classList.add('animate'), 500);
-    
+    beerGrid.appendChild(beerContainer)    
 }
 
 // Handle toggling mobile dropdown menu visibility

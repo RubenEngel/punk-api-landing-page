@@ -13,10 +13,6 @@ p {
   display: none;
 }
 
-.animate {
-  opacity: 1;
-}
-
 .navbar {
   background-color: rgba(0, 0, 0, 0.6);
   display: flex;
@@ -142,7 +138,6 @@ p {
   flex-direction: column;
   justify-content: space-between;
   padding: 20px;
-  transition: all 0.5s;
 }
 .beer__title {
   font-size: 1.2rem;
@@ -166,7 +161,6 @@ p {
   justify-content: center;
   padding: 15px;
   cursor: pointer;
-  border-radius: 5px;
 }
 .beer__heart {
   width: 30px;
