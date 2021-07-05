@@ -1,3 +1,4 @@
+// ------ Fetch API data logic
 let page = 1;
 
 function fetchData() {
@@ -6,10 +7,15 @@ function fetchData() {
    .then((data) => data.forEach((beer) => {
         createBeerContainer(beer)
    }))
+   .catch((error) => {
+       console.log(error);
+        document.querySelector('.beer__error').classList.remove('hidden')
+    })
    
    page += 1;
 }
 
+// ------ Create new beer component function
 function createBeerContainer(beer) {
     const beerGrid = document.querySelector('#beer__grid');
     // Create HTML elements
@@ -22,7 +28,7 @@ function createBeerContainer(beer) {
     const beerClearHeart = document.createElement('img')
     const beerFullHeart = document.createElement('img')
 
-    //  Place elements within beer div
+    //  Place elements within beer container
     beerTextContainer.appendChild(beerTitle).insertAdjacentHTML('beforeend', beer.name);
     beerTextContainer.appendChild(beerDesc).insertAdjacentHTML('beforeend', beer.description);
     beerImgContainer.appendChild(beerImg).src = beer.image_url;
@@ -30,7 +36,7 @@ function createBeerContainer(beer) {
     beerImgContainer.appendChild(beerFullHeart).src = 'assets/heart-thin-white-32.png'
     beerContainer.appendChild(beerTextContainer);
     beerContainer.appendChild(beerImgContainer);
-    
+
     // Add classes to each element
     beerContainer.classList.add('beer__container') 
     beerTextContainer.classList.add('beer__textContainer');
@@ -40,22 +46,22 @@ function createBeerContainer(beer) {
     beerImg.classList.add('beer__image');
     beerClearHeart.classList.add('beer__heart')
     beerFullHeart.classList.add('beer__heart', 'hidden')
-    // Add beer div to beer grid
-    beerGrid.appendChild(beerContainer)
-
+    // Add event listener for hearting beers
     beerImgContainer.addEventListener('click', () => beerFullHeart.classList.toggle('hidden'))
+
+    // Add beer container to beer grid
+    beerGrid.appendChild(beerContainer)
+    setTimeout(() => beerContainer.classList.add('animate'), 500);
+    
 }
 
-function toggleMenu() {
-    document.querySelector('.navbar__menu').classList.toggle('hidden')
-}
+// Handle toggling mobile dropdown menu visibility
+document.querySelector('.navbar__menuIcon').addEventListener('click', () => {
+    document.querySelector('.navbar__dropMenu').classList.toggle('hidden')
+});
 
-function toggleHidden(element) {
-    element.classList.toggle('hidden')
-}
-
-// Add click event listeners on buttons
+// Add click event listeners on 'load more' button
 document.querySelector('.beer__button').addEventListener('click', fetchData);
-document.querySelector('.navbar__menuIcon').addEventListener('click', toggleMenu)
 
+// Load the first 10 products on page load
 fetchData();

@@ -1,15 +1,11 @@
 body,
-html {
+html,
+h1,
+h2,
+p {
+  scroll-behavior: smooth;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
-  margin: 0;
-}
-
-h1 {
-  margin: 0;
-}
-
-p {
   margin: 0;
 }
 
@@ -17,218 +13,15 @@ p {
   display: none;
 }
 
-.navbar {
-  background-color: rgba(0, 0, 0, 0.6);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height: 70px;
-  width: 100%;
-  position: fixed;
-  z-index: 1;
+.animate {
+  // transform: scale(1);
+  opacity: 1;
 }
 
-.navbar__right {
-  display: flex;
-  align-items: center;
-}
+@import "navbar.scss";
 
-.navbar__logo {
-  margin: 10px 40px;
-  width: 40px;
-  opacity: 100%;
-}
+@import "hero.scss";
 
-.navbar__menuIcon {
-  font-size: 1.7rem;
-  color: white;
-  margin: 0 25px;
-  cursor: pointer;
-}
+@import "beer.scss";
 
-@media only screen and (min-width: 600px) {
-  .navbar__menuIcon {
-    display: none;
-  }
-}
-
-.navbar__nav {
-  margin-right: 50px;
-  display: flex;
-  align-items: center;
-}
-
-@media only screen and (max-width: 600px) {
-  .navbar__nav {
-    display: none;
-  }
-}
-
-.navbar__navItem {
-  text-transform: uppercase;
-  text-decoration: none;
-  margin: 15px;
-  color: white;
-}
-
-.navbar__menu {
-  position: fixed;
-  top: 70px;
-  z-index: 1;
-}
-
-.navbar__nav--mobile {
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.6);
-  width: 100vw;
-  text-align: right;
-}
-
-.hero__text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: white;
-  padding: 30px;
-  height: calc(100% - 200px);
-}
-
-@media only screen and (min-width: 600px) {
-  .hero__text {
-    width: 40%;
-  }
-}
-
-.hero__heading {
-  font-size: 3rem;
-  font-weight: 300;
-  margin-bottom: 10px;
-}
-
-.hero__paragraph {
-  font-size: 0.9rem;
-  font-weight: 300;
-  line-height: 1.5rem;
-}
-
-.hero__textBackground {
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-  padding: 10px;
-}
-
-@media only screen and (min-width: 600px) {
-  .hero__textBackground {
-    background-color: rgba(0, 0, 0, 0);
-  }
-}
-
-.hero__image {
-  background-image: url("assets/hero.jpeg");
-  height: 70%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  padding-top: 80px;
-}
-
-@media only screen and (min-width: 600px) {
-  .hero__image {
-    height: 60%;
-  }
-}
-
-#beer__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  column-gap: 20px;
-  row-gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.beer__button {
-  padding: 10px 20px;
-  border-radius: 10px;
-  border-width: 1px;
-  border-style: outset;
-  background-color: black;
-  opacity: 80%;
-  color: white;
-  margin: 30px;
-  cursor: pointer;
-}
-
-.beer__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 20px;
-  transition: opacity ease-in;
-}
-
-.beer__title {
-  font-size: 1.2rem;
-}
-
-.beer__description {
-  font-size: 0.8rem;
-}
-
-.beer__textContainer {
-  margin-bottom: 15px;
-}
-
-.beer__buttonContainer {
-  display: flex;
-  justify-content: center;
-}
-
-.beer__image {
-  max-width: 100%;
-  height: 200px;
-  margin: auto;
-}
-
-.beer__imageContainer {
-  position: relative;
-  background-color: #2897b1;
-  display: flex;
-  justify-content: center;
-  padding: 15px;
-  cursor: pointer;
-}
-
-.beer__heart {
-  width: 30px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
-.footer {
-  text-align: center;
-}
-
-.footer__top {
-  background-color: black;
-  padding: 40px 0;
-  margin: 0;
-}
-
-.footer__bottom {
-  background-color: #182629;
-  height: 40px;
-  color: white;
-}
-
-.footer__bottom {
-  margin-top: 0;
-  padding-top: 15px;
-}
-
-.footer__logo {
-  width: 40px;
-}
+@import "footer.scss";

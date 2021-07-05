@@ -1,0 +1,48 @@
+.hero {
+  p {
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+
+  &__textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    padding: 30px;
+    height: calc(100% - 200px);
+    @media only screen and (min-width: 600px) {
+      width: 40%;
+    }
+  }
+
+  &__textBackground {
+    background-color: rgba(0, 0, 0, 0.5);
+    @media only screen and (min-width: 600px) {
+      background-color: rgba(0, 0, 0, 0);
+    }
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  &__image {
+    height: 70%;
+    min-height: 500px;
+    @media only screen and (min-width: 600px) {
+      height: 50%;
+    }
+    background-image: url("assets/hero.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-top: 80px;
+  }
+}

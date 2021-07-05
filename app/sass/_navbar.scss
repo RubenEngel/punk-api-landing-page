@@ -1,0 +1,61 @@
+.navbar {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 70px;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    margin: 10px 40px;
+    width: 40px;
+    opacity: 100%;
+  }
+
+  &__menuIcon {
+    font-size: 1.7rem;
+    color: white;
+    margin: 0 25px;
+    cursor: pointer;
+    @media only screen and (min-width: 600px) {
+      display: none;
+    }
+  }
+
+  &__nav {
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    @media only screen and (max-width: 600px) {
+      display: none;
+    }
+  }
+
+  &__navItem {
+    text-transform: uppercase;
+    margin: 15px;
+    color: white;
+    text-decoration: none;
+  }
+
+  &__dropMenu {
+    position: fixed;
+    top: 70px;
+    z-index: 1;
+  }
+
+  &__dropNav {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100vw;
+    text-align: right;
+  }
+}
