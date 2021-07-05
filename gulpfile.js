@@ -47,7 +47,6 @@ async function minifyHTML() {
     .pipe(gulp.dest('dist/html'));
 };
 
-exports.sass = buildSass
 exports.server = gulp.series(
   startServer,
   watchSass
